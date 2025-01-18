@@ -1,0 +1,40 @@
+﻿.topnav {
+    width: 100vw;
+    height: 10vh;
+    background: linear-gradient(blue, #0094ff);
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    width: 55vw;
+    height: 10vh;
+    padding: 1vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    color: white;
+    font-size: calc(0.25rem + 4vmin);
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
+}
+
+.buttons {
+    width: 45vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    gap: 0.1vw;
+}
+
+.navButton {
+    background-color: transparent;
+    width: 15vw;
+    height: 10vh;
+    color: white;
+    border: none;
+    font-size: calc(0.15rem + 2.5vmin);
+}
+
+.navButton:hover {
+    color: aqua;
+}
