@@ -4,6 +4,8 @@
     background: linear-gradient(blue, #0094ff);
     display: flex;
     flex-direction: row;
+    transition: 0.1s, ease-in-out;
+    flex-wrap: wrap;
 }
 
 .title {
@@ -14,12 +16,12 @@
     margin-right: 2vw;
     color: white;
     font-size: calc(0.25rem + 4vmin);
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
 }
 
 .buttons {
-    width: 45vw;
+    width: 40vw;
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -32,7 +34,9 @@
     height: 10vh;
     color: white;
     border: none;
-    font-size: calc(0.15rem + 2.5vmin);
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(0.15rem + 3vmin);
+    font-weight: bold;
 }
 
 .navButton:hover {

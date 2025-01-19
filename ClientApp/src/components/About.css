@@ -5,4 +5,5 @@
     flex-direction: column;
     gap: 1vh;
     background: linear-gradient(blue, #0094ff);
+    transition: 0.1s, ease-in-out;
 }

@@ -3,6 +3,39 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 1vh;
     background: linear-gradient(blue, #0094ff);
+    transition: 0.1s, ease-in-out;
+}
+
+.subTopbar {
+    width: 99vw;
+    height: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sidebarButton {
+    width: 2.75vw;
+    height: 6vh;
+    padding-bottom: 1vh;
+    border: 0.5vh solid white;
+    background-color: transparent;
+    color: white;
+    font-size: calc(0.25rem + 3vmin);
+    text-align: left;
+    transition: width 1s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+.sidebarButton i:hover {
+    color: aqua;
+}
+
+.content {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
 }
