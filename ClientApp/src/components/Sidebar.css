@@ -1,7 +1,62 @@
-﻿.container {
-    width: 21vw;
-    height: 80vh;
+﻿.sidebar {
+    width: 20vw;
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    transition: height 0.75s ease-in-out;
+    transition: left 0.5s ease-in-out;
+    position: absolute;
+    top: 8vh;
+    left: -500px;
+    margin-top: 2vh;
+    background: linear-gradient(#e0e0ff, #0094ff);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.mainCategoryContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainCategoryTitle {
+    width: 19vw;
+    height: 5vh;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 8vw;
+    border: 0.5vh dotted #800080;
+}
+
+.mainCategory {
+    width: fit-content;
+    height: fit-content;
+    color: #800080;
+    font-size: calc(0.25rem + 2vmin);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+
+.expand {
+    width: fit-content;
+    height: fit-content;
+    color: #800080;
+    font-size: calc(0.25rem + 3vmin);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.expand:hover {
+    color: #80008080;
+}
+
+.mainCategoryContent {
+    width: 19vw;
+    height: 0vh;
+    transition: height 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    border-left: 0.5vh dotted #800080;
+    border-right: 0.5vh dotted #800080;
+    border-bottom: 0.5vh dotted #800080;
+    visibility: collapse;
 }

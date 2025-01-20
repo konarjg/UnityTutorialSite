@@ -1,7 +1,7 @@
 ﻿.topnav {
     width: 100vw;
     height: 10vh;
-    background: linear-gradient(blue, #0094ff);
+    background: linear-gradient(#0094ff, #e0e0ff);
     display: flex;
     flex-direction: row;
     transition: 0.1s, ease-in-out;
@@ -9,36 +9,61 @@
 }
 
 .title {
-    width: 55vw;
-    height: 10vh;
+    width: fit-content;
+    height: fit-content;
     padding: 1vh;
     margin-left: 2vw;
     margin-right: 2vw;
     color: white;
-    font-size: calc(0.25rem + 4vmin);
+    font-size: calc(0.25rem + 5vmin);
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
+    border: none;
+    background-color: transparent;
+}
+
+.title:hover {
+    color: aqua;
 }
 
 .buttons {
-    width: 40vw;
-    height: 10vh;
+    margin-left: 35vw;
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: row;
-    gap: 0.1vw;
+    gap: 2vw;
 }
 
 .navButton {
     background-color: transparent;
-    width: 15vw;
+    width: fit-content;
     height: 10vh;
     color: white;
     border: none;
     font-family: 'Roboto', sans-serif;
-    font-size: calc(0.15rem + 3vmin);
+    font-size: calc(0.15rem + 4vmin);
     font-weight: bold;
 }
 
 .navButton:hover {
+    color: aqua;
+}
+
+.sidebarButton {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: calc(0.25rem + 5vmin);
+    text-align: left;
+}
+
+.sidebarButton i {
+    pointer-events: none;
+}
+
+.sidebarButton:hover {
     color: aqua;
 }
