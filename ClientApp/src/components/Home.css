@@ -3,6 +3,29 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(#0094ff, blue);
+    background: #333333;
     transition: 0.1s, ease-in-out;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.tutorial {
+    width: 100vw;
+    color: #cfcfcf;
+    font-size: 48px;
+    transition: width 0.55s ease-in-out, margin-left 0.55s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.paragraph {
+    width: 80vw;
+    height: fit-content;
+    font-size: 32px;
+    margin-left: auto;
+    margin-right: auto;
 }

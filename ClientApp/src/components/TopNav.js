@@ -2,24 +2,24 @@
 import { useNavigate } from 'react-router-dom';
 import './TopNav.css';
 
-export function TopNav({ route, onClick }) {
+export function TopNav({ onClick }) {
     const navigate = useNavigate();
 
+    function toggleSidebar(buttonId) {
+        onClick(buttonId);
+    }
+
     return(
-        <div className="topnav">
-            {
-                route === '/Tutorials' &&
-                <button onClick={onClick} className="sidebarButton" id="sidebarButton">
-                    <i className='fa fa-fw fa-bars' />
-                </button>
-            }
+        <div className="topnav" id="topnav">
+            <button onClick={(event) => toggleSidebar(event.currentTarget.id)} className="sidebarButton" id="sidebarButton">
+                <i className='fa fa-fw fa-bars' />
+            </button>
             
             <button className="title" onClick={() => navigate('/')}>Unity Tutorials</button>
-            <div className="buttons">
-                <button className="navButton" onClick={() => navigate('/Tutorials')}>Tutorials</button>
-                <button className="navButton" onClick={() => navigate('/About')}>About me</button>
+            <div className="navButtons">
                 <button className="navButton" onClick={() => navigate('/Login')}><i className="fa fa-fw fa-user-circle" /> Login</button>
             </div>
+            
         </div>
     );
 }

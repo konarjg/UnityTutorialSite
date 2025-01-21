@@ -1,10 +1,9 @@
 ﻿.topnav {
     width: 100vw;
-    height: 10vh;
-    background: linear-gradient(#0094ff, #e0e0ff);
+    height: fit-content;
+    background: #414141;
     display: flex;
     flex-direction: row;
-    transition: 0.1s, ease-in-out;
     flex-wrap: wrap;
 }
 
@@ -14,40 +13,40 @@
     padding: 1vh;
     margin-left: 2vw;
     margin-right: 2vw;
-    color: white;
     font-size: calc(0.25rem + 5vmin);
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     border: none;
     background-color: transparent;
+    color: #cfcfcf;
+    transition: background-color 0.4s ease-in-out;
 }
 
 .title:hover {
-    color: aqua;
+    background-color: #cfcfcf19;
 }
 
-.buttons {
-    margin-left: 35vw;
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    gap: 2vw;
+.navButtons {
+    flex: 1;
+    float: right;
 }
 
 .navButton {
     background-color: transparent;
     width: fit-content;
-    height: 10vh;
-    color: white;
+    height: fit-content;
     border: none;
+    padding: 1vh;
     font-family: 'Roboto', sans-serif;
-    font-size: calc(0.15rem + 4vmin);
+    font-size: calc(0.15rem + 5vmin);
     font-weight: bold;
+    color: #cfcfcf;
+    float: right;
+    transition: background-color 0.4s ease-in-out;
 }
 
 .navButton:hover {
-    color: aqua;
+    background-color: #cfcfcf19;
 }
 
 .sidebarButton {
@@ -55,9 +54,11 @@
     height: fit-content;
     background-color: transparent;
     border: none;
-    color: white;
     font-size: calc(0.25rem + 5vmin);
     text-align: left;
+    color: #cfcfcf;
+    padding: 1vh;
+    transition: background-color 0.4s ease-in-out;
 }
 
 .sidebarButton i {
@@ -65,5 +66,5 @@
 }
 
 .sidebarButton:hover {
-    color: aqua;
+    background-color: #cfcfcf19;
 }

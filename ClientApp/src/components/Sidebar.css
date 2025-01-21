@@ -1,37 +1,61 @@
 ﻿.sidebar {
-    width: 20vw;
-    height: 90vh;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     transition: left 0.5s ease-in-out;
-    position: absolute;
-    top: 8vh;
-    left: -500px;
-    margin-top: 2vh;
-    background: linear-gradient(#e0e0ff, #0094ff);
+    position: fixed;
+    top: auto;
+    left: -100vw;
+    background: #565656;
     overflow-y: scroll;
     overflow-x: hidden;
+    gap: 0.5vh;
+    color: #cfcfcf;
+    scrollbar-color: #777777 #565656;
+}
+
+.navigation {
+    width: 99%;
+    height: fit-content;
+}
+
+.navigationButton {
+    width: 99%;
+    height: fit-content;
+    border: none;
+    padding: 1vh;
+    transition: background-color 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.navigationButton:hover {
+    background-color: #cfcfcf19;
 }
 
 .mainCategoryContainer {
+    width: 99%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+.mainCategoryTitle:hover {
+    background-color: #cfcfcf19;
 }
 
 .mainCategoryTitle {
-    width: 19vw;
-    height: 5vh;
+    height: fit-content;
     display: inline-flex;
     flex-direction: row;
-    gap: 8vw;
-    border: 0.5vh dotted #800080;
+    font-size: inherit;
 }
 
 .mainCategory {
-    width: fit-content;
+    width: 99%;
     height: fit-content;
-    color: #800080;
-    font-size: calc(0.25rem + 2vmin);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -41,22 +65,118 @@
 .expand {
     width: fit-content;
     height: fit-content;
-    color: #800080;
-    font-size: calc(0.25rem + 3vmin);
+    padding: 1vh;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .expand:hover {
-    color: #80008080;
+    color: #cfcfcf80;
 }
 
 .mainCategoryContent {
-    width: 19vw;
+    width: 99%;
     height: 0vh;
-    transition: height 0.5s ease-in-out, visibility 0.5s ease-in-out;
-    border-left: 0.5vh dotted #800080;
-    border-right: 0.5vh dotted #800080;
-    border-bottom: 0.5vh dotted #800080;
+    transition: height 0.5s ease-in-out, visibility 0.5s ease-in-out;   
     visibility: collapse;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.tutorialTitle:hover {
+    background-color: #cfcfcf19;
+    user-select: none;
+    font-size: inherit;
+}
+
+@media (min-width: 576px) {
+    .sidebar {
+        width: 70vw;
+    }
+
+    .mainCategoryContainer {
+        font-size: 28px;
+    }
+
+    .navigationButton {
+        font-size: 28px;
+    }
+
+    .tutorialTitle {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 60vw;
+    }
+
+    .mainCategoryContainer {
+        font-size: 32px;
+    }
+
+    .navigationButton {
+        font-size: 32px;
+    }
+
+    .tutorialTitle {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        width: 50vw;
+    }
+
+    .mainCategoryContainer {
+        font-size: 32px;
+    }
+
+    .navigationButton {
+        font-size: 32px;
+    }
+
+    .tutorialTitle {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 30vw;
+    }
+
+    .mainCategoryContainer {
+        font-size: 36px;
+    }
+
+    .navigationButton {
+        font-size: 36px;
+    }
+
+    .tutorialTitle {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .sidebar {
+        width: 25vw;
+    }
+
+    .mainCategoryContainer {
+        font-size: 42px;
+    }
+
+    .navigationButton {
+        font-size: 42px;
+    }
+
+    .tutorialTitle {
+        font-size: 42px;
+    }
 }
