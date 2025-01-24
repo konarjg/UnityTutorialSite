@@ -68,3 +68,17 @@
 .sidebarButton:hover {
     background-color: #cfcfcf19;
 }
+
+@media (hover: none) and (cursor: fine) {
+    .title{
+        background-color: transparent;
+    }
+
+    .navButton {
+        background-color: transparent;
+    }
+
+    .sidebarButton {
+        background-color: transparent;
+    }
+}

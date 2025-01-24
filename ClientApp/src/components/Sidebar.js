@@ -1,15 +1,20 @@
-﻿import { React } from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+﻿import { React, forwardRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 
-export function Sidebar({ categories, displayTutorial }) {
+export const Sidebar = forwardRef(({ categories, canEdit, displayTutorial }, ref ) => {
     const navigate = useNavigate();
 
     function selectTutorial(categoryId, tutorialId) {
         var tutorial = categories[categoryId].tutorials[tutorialId];
         displayTutorial(tutorial);
+        navigate("?tutorialId=" + tutorial.tutorialId);
+    }
+
+    function changeRoute(route) {
+        sessionStorage.clear();
+        navigate(route);
+        window.location.reload();
     }
 
     function toggleMenu(id) {
@@ -34,10 +39,11 @@ export function Sidebar({ categories, displayTutorial }) {
     }
 
     return (
-        <div className='sidebar' id='sidebar'>
+        <div className='sidebar' id='sidebar' ref={ref}>
             <div className='navigation'>
-                <div className='navigationButton' onClick={() => navigate('/')}>Home</div>
-                <div className='navigationButton' onClick={() => navigate('/About')}>About me</div>
+                <div className='navigationButton' onClick={() => changeRoute('/')}>Home</div>
+                <div className='navigationButton' onClick={() => changeRoute('/About')}>About me</div>
+                {canEdit && <div className='navigationButton' onClick={() => changeRoute('/EditorPanel')}>Editor panel</div>}
             </div>
 
             {
@@ -49,7 +55,11 @@ export function Sidebar({ categories, displayTutorial }) {
                         </div>
 
                         <div id={x.categoryId} className="mainCategoryContent">
-                            <div className='tutorialTitle' onClick={() => selectTutorial(x.categoryId, x.tutorials[0].tutorialId)}>{x.tutorials[0].title}</div>
+                            {
+                                x.tutorials.map(y =>
+                                    <div className='tutorialTitle' onClick={() => selectTutorial(x.categoryId, y.tutorialId)}>{y.title}</div>
+                                )
+                            }
                         </div>
                     </div>
                 )
@@ -57,4 +67,4 @@ export function Sidebar({ categories, displayTutorial }) {
            
         </div>
     );
-}
+});
