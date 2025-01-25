@@ -1,5 +1,6 @@
 ﻿import { React, forwardRef } from 'react';
 import { CodeBlock, vs2015 } from 'react-code-blocks';
+import styles from './css/Tutorial.module.css';
 
 export const Tutorial = forwardRef(({ currentTutorial }, ref) => {
     if (currentTutorial === null) {
@@ -41,13 +42,13 @@ export const Tutorial = forwardRef(({ currentTutorial }, ref) => {
     };
 
     return (
-        <div className="tutorial" id="tutorial" ref={ref}>
-            <p className="tutorialHeader">{currentTutorial.title}</p>
+        <div className={styles.main} id="tutorial" ref={ref}>
+            <p className={styles.header}>{currentTutorial.title}</p>
 
             {
                 currentTutorial.paragraphs.map(x => (
                     x.type === "Text" ? (
-                        <p key={x.paragraphId} className="paragraph">{x.content}</p>
+                        <p key={x.paragraphId} className={styles.paragraph}>{x.content}</p>
                     ) :
                     x.type === "Code" ? (
                         <CodeBlock key={x.paragraphId} customStyle={codeStyle} text={x.content} language="csharp" theme={vs2015} showLineNumbers="true" />

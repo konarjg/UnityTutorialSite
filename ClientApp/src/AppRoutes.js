@@ -1,4 +1,4 @@
-import { Home } from "./components/Home";
+import { Home } from "./components/home/Home";
 import { EditorPanel } from "./components/EditorPanel";
 
 const AppRoutes = [

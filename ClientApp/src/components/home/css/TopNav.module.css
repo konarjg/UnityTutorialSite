@@ -1,4 +1,4 @@
-﻿.topnav {
+﻿.main {
     width: 100vw;
     height: fit-content;
     background: #414141;
@@ -71,6 +71,20 @@
 
 @media (hover: none) and (cursor: fine) {
     .title{
+        background-color: transparent;
+    }
+
+    .navButton {
+        background-color: transparent;
+    }
+
+    .sidebarButton {
+        background-color: transparent;
+    }
+}
+
+@media (hover: none) and (cursor: coarse) {
+    .title {
         background-color: transparent;
     }
 

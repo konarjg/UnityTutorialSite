@@ -1,5 +1,5 @@
 ﻿import { useEffect } from 'react';
-import { TopNav } from '../TopNav';
+import { TopNav } from '../home/TopNav';
 
 export function useSidebar(categories, currentTutorial, topNavRef, sidebarRef, tutorialRef) {
     useEffect(() => {

@@ -1,13 +1,13 @@
 ﻿import { React } from 'react';
-import { TopNav } from './TopNav';
-import { Sidebar } from './Sidebar';
+import { TopNav } from './home/TopNav';
+import { Sidebar } from './home/Sidebar';
 import { TutorialEditor } from './TutorialEditor'
 import { useState } from 'react';
 import { useRef } from 'react';
 import { useSidebar } from './hooks/useSidebar';
 import { useMovableParagraphs } from './hooks/useMovableParagraphs';
 
-import './Home.css';
+import styles from './home/css/Home.module.css';
 
 export function EditorPanel() {
     const topnavRef = useRef(null);
@@ -31,10 +31,10 @@ export function EditorPanel() {
     const { move } = useMovableParagraphs(editedTutorial, setEditedTutorial);
 
     return (
-        <div className="main">
+        <div className={styles.main}>
             <TopNav onClick={toggleSidebar} ref={topnavRef} />
 
-            <div className="content">
+            <div className={styles.content}>
                 <Sidebar categories={categories} canEdit={user.editor} displayTutorial={(tutorial) => setEditedTutorial(tutorial)} ref={sidebarRef} />
                 <TutorialEditor editedTutorial={editedTutorial} ref={tutorialRef} move={move} />
             </div>

@@ -1,6 +1,6 @@
-﻿import { React, forwardRef } from 'react';
+﻿import { React, forwardRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Sidebar.css';
+import styles from './css/Sidebar.module.css';
 
 export const Sidebar = forwardRef(({ categories, canEdit, displayTutorial }, ref ) => {
     const navigate = useNavigate();
@@ -12,7 +12,8 @@ export const Sidebar = forwardRef(({ categories, canEdit, displayTutorial }, ref
     }
 
     function changeRoute(route) {
-        sessionStorage.clear();
+        sessionStorage.removeItem('categories');
+        sessionStorage.removeItem('currentTutorial');
         navigate(route);
         window.location.reload();
     }
@@ -39,25 +40,25 @@ export const Sidebar = forwardRef(({ categories, canEdit, displayTutorial }, ref
     }
 
     return (
-        <div className='sidebar' id='sidebar' ref={ref}>
-            <div className='navigation'>
-                <div className='navigationButton' onClick={() => changeRoute('/')}>Home</div>
-                <div className='navigationButton' onClick={() => changeRoute('/About')}>About me</div>
-                {canEdit && <div className='navigationButton' onClick={() => changeRoute('/EditorPanel')}>Editor panel</div>}
+        <div className={styles.sidebar} id='sidebar' ref={ref}>
+            <div className={styles.navigation} >
+                <div className={styles.navigationButton} onClick={() => changeRoute('/')}>Home</div>
+                <div className={styles.navigationButton} onClick={() => changeRoute('/About')}>About me</div>
+                {canEdit && <div className={styles.navigationButton} onClick={() => changeRoute('/EditorPanel')}>Editor panel</div>}
             </div>
 
             {
                 categories.map(x =>
-                    <div key={x.categoryId} className="mainCategoryContainer">
-                        <div className="mainCategoryTitle" id={x.categoryId} onClick={(event) => toggleMenu(event.currentTarget.id)}>
-                            <span className="mainCategory">{x.title}</span>
-                            <i id={'mainCategory' + x.categoryId} className='fa fa-fw fa-chevron-down expand' />
+                    <div key={x.categoryId} className={styles.mainCategoryContainer}>
+                        <div className={styles.mainCategoryTitle} id={x.categoryId} onClick={(event) => toggleMenu(event.currentTarget.id)}>
+                            <span className={styles.mainCategory}>{x.title}</span>
+                            <i id={'mainCategory' + x.categoryId} className={`fa fa-fw fa-chevron-down ${styles.expand}`} />
                         </div>
 
-                        <div id={x.categoryId} className="mainCategoryContent">
+                        <div id={x.categoryId} className={styles.mainCategoryContent}>
                             {
                                 x.tutorials.map(y =>
-                                    <div className='tutorialTitle' onClick={() => selectTutorial(x.categoryId, y.tutorialId)}>{y.title}</div>
+                                    <div className={styles.tutorialTitle} onClick={() => selectTutorial(x.categoryId, y.tutorialId)}>{y.title}</div>
                                 )
                             }
                         </div>

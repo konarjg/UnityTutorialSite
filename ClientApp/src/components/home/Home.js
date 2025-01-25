@@ -4,8 +4,8 @@ import { Sidebar } from './Sidebar';
 import { Tutorial } from './Tutorial'
 import { useState } from 'react';
 import { useRef } from 'react';
-import { useSidebar } from './hooks/useSidebar';
-import './Home.css';
+import { useSidebar } from '../hooks/useSidebar';
+import styles from './css/Home.module.css';
 
 export function Home() {
     const topnavRef = useRef(null);
@@ -28,10 +28,10 @@ export function Home() {
     const { toggleSidebar } = useSidebar(categories, currentTutorial, topnavRef, sidebarRef, tutorialRef);
 
     return(
-        <div className="main">
+        <div className={styles.main}>
             <TopNav onClick={toggleSidebar} ref={topnavRef} />
 
-            <div className="content">
+            <div className={styles.content}>
                 <Sidebar categories={categories} canEdit={user.editor} displayTutorial={(tutorial) => setCurrentTutorial(tutorial)} ref={sidebarRef} />
                 <Tutorial currentTutorial={currentTutorial} ref={tutorialRef} />
             </div>
