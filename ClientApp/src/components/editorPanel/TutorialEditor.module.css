@@ -1,0 +1,36 @@
+﻿.main {
+    width: 100vw;
+    height: fit-content;
+    color: #cfcfcf;
+    font-size: 16px;
+    transition: width 0.55s ease-in-out, margin-left 0.55s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.title {
+    width: 80vw;
+    height: fit-content;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    background-color: transparent;
+    color: inherit;
+    resize: none;
+}
+
+.add {
+    width: 20vw;
+    height: fit-content;
+    padding: 3vh;
+    margin: auto;
+    background-color: #565656;
+    border: 0.1vh solid #cfcfcf;
+    color: inherit;
+}
+
+.add:hover {
+
+}

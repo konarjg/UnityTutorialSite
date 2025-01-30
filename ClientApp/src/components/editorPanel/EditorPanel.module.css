@@ -1,0 +1,9 @@
+﻿.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #333333;
+    transition: 0.1s, ease-in-out;
+    font-family: 'Roboto', sans-serif;
+}

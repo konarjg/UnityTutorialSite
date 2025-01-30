@@ -1,0 +1,58 @@
+﻿.title {
+    color: #cfcfcf;
+    font-size: 14px;
+    border: 0.25vh dotted transparent;
+    margin-left: 0.5vw;
+}
+
+.title:hover {
+    background-color: #cfcfcf19;
+    user-select: none;
+    font-size: inherit;
+}
+
+.active {
+    border: 0.25vh dotted #cfcfcf;
+}
+
+@media (hover: none) and (pointer: fine) {
+    .title:hover {
+        background-color: transparent;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .title:hover {
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 576px) {
+    .title {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .title {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .title {
+        font-size: 24px;
+    }
+}

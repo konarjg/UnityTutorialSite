@@ -1,0 +1,58 @@
+﻿.main {
+    width: 80vw;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    color: #cfcfcf;
+    font-size: 14px;
+}
+
+.editableOutline {
+    outline: 0.1vh solid #cfcfcf;
+}
+
+.content {
+    width: 99%;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 0.5vh;
+    white-space: break-spaces;
+    word-wrap: break-word;
+}
+
+.editable {
+    outline: 0.1vh solid #cfcfcf;
+}
+
+@media (min-width: 576px) {
+    .main {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .main {
+        font-size: 24px;
+    }
+}

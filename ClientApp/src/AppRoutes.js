@@ -1,5 +1,5 @@
 import { Home } from "./components/home/Home";
-import { EditorPanel } from "./components/EditorPanel";
+import { EditorPanel } from "./components/editorPanel/EditorPanel";
 
 const AppRoutes = [
     {

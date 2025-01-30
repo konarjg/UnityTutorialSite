@@ -1,0 +1,104 @@
+﻿.main {
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.title {
+    height: fit-content;
+    display: inline-flex;
+    flex-direction: row;
+    font-size: inherit;
+}
+
+.panel:hover {
+    background-color: #cfcfcf19;
+}
+
+.panel {
+    width: 99%;
+    padding: 0.5vh;
+    height: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+
+.expand {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5vh;
+    font-weight: bold;
+}
+
+.expand:hover {
+    color: #cfcfcf80;
+}
+
+.content {
+    width: 99%;
+    height: 0vh;
+    transition: height 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    visibility: collapse;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+@media (hover: none) and (pointer: fine) {
+    .panel:hover {
+        background-color: transparent;
+    }
+
+    .expand:hover {
+        background-color: transparent;
+    }
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+    .panel:hover {
+        background-color: transparent;
+    }
+
+    .expand:hover {
+        background-color: transparent;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .main {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .main {
+        font-size: 24px;
+    }
+}

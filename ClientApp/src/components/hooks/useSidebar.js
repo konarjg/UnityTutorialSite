@@ -1,5 +1,4 @@
 ﻿import { useEffect } from 'react';
-import { TopNav } from '../home/TopNav';
 
 export function useSidebar(categories, currentTutorial, topNavRef, sidebarRef, tutorialRef) {
     useEffect(() => {
@@ -21,27 +20,20 @@ export function useSidebar(categories, currentTutorial, topNavRef, sidebarRef, t
         tutorial.style.height = (window.innerHeight - topnav.offsetHeight) + "px";
     }
 
-    function toggleSidebar(buttonId) {
+    function toggleSidebar() {
         if (sidebarRef.current === null || tutorialRef.current === null) {
             return;
         }
 
         var sidebar = sidebarRef.current;
-        var button = document.getElementById(buttonId);
         var tutorial = tutorialRef.current;
-
-        if (sidebar.style.left === "0vw") {
-            button.classList.remove("active");
-        }
-        else {
-            button.classList.add("active");
-        }
+        var open = sidebar.style.left === "0vw";
 
         updateSidebar();
-        tutorial.style.marginLeft = sidebar.style.left === "0vw" ? "0vw" : sidebar.offsetWidth + 0.01 * window.innerWidth + "px";
+        tutorial.style.marginLeft = open ? "0vw" : sidebar.offsetWidth + 0.01 * window.innerWidth + "px";
         tutorial.style.marginRight = "5vw";
-        tutorial.style.width = sidebar.style.left === "0vw" ? "100vw" : (window.innerWidth - sidebar.offsetWidth - 0.01 * window.innerWidth) + "px";
-        sidebar.style.left = sidebar.style.left === "0vw" ? "-100vw" : "0vw";
+        tutorial.style.width = open ? "100vw" : (window.innerWidth - sidebar.offsetWidth - 0.01 * window.innerWidth) + "px";
+        sidebar.style.left = open ? "-100vw" : "0vw";
     }
 
     return { toggleSidebar };

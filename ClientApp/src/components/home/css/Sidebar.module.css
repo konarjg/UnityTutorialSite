@@ -2,7 +2,6 @@
     width: 80vw;
     display: flex;
     flex-direction: column;
-    transition: left 0.5s ease-in-out;
     position: fixed;
     top: auto;
     left: -100vw;
@@ -12,6 +11,7 @@
     gap: 0.5vh;
     color: #cfcfcf;
     scrollbar-color: #777777 #565656;
+    transition: left 0.5s ease-in-out;
 }
 
 .navigation {
@@ -22,8 +22,9 @@
 .navigationButton {
     width: 99%;
     height: fit-content;
+    font-size: 14px;
     border: none;
-    padding: 1vh;
+    padding: 0.5vh;
     transition: background-color 0.4s ease-in-out;
     cursor: pointer;
 }
@@ -32,63 +33,16 @@
     background-color: #cfcfcf19;
 }
 
-.mainCategoryContainer {
-    width: 99%;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    transition: background-color 0.4s ease-in-out;
-    padding-left: 1vh;
-    padding-right: 1vh;
+@media (hover: none) and (pointer: fine) {
+    .navigationButton:hover {
+        background-color: transparent;
+    }
 }
 
-.mainCategoryTitle:hover {
-    background-color: #cfcfcf19;
-}
-
-.mainCategoryTitle {
-    height: fit-content;
-    display: inline-flex;
-    flex-direction: row;
-    font-size: inherit;
-}
-
-.mainCategory {
-    width: 99%;
-    height: fit-content;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    user-select: none;
-}
-
-.expand {
-    width: fit-content;
-    height: fit-content;
-    padding: 1vh;
-    font-weight: bold;
-}
-
-.expand:hover {
-    color: #cfcfcf80;
-}
-
-.mainCategoryContent {
-    width: 99%;
-    height: 0vh;
-    transition: height 0.5s ease-in-out, visibility 0.5s ease-in-out;   
-    visibility: collapse;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5vh;
-}
-
-.tutorialTitle:hover {
-    background-color: #cfcfcf19;
-    user-select: none;
-    font-size: inherit;
+@media (hover: none) and (pointer: coarse) {
+    .navigationButton:hover {
+        background-color: transparent;
+    }
 }
 
 @media (min-width: 576px) {
@@ -96,16 +50,8 @@
         width: 70vw;
     }
 
-    .mainCategoryContainer {
-        font-size: 28px;
-    }
-
     .navigationButton {
-        font-size: 28px;
-    }
-
-    .tutorialTitle {
-        font-size: 28px;
+        font-size: 16px;
     }
 }
 
@@ -114,16 +60,8 @@
         width: 60vw;
     }
 
-    .mainCategoryContainer {
-        font-size: 32px;
-    }
-
     .navigationButton {
-        font-size: 32px;
-    }
-
-    .tutorialTitle {
-        font-size: 32px;
+        font-size: 18px;
     }
 }
 
@@ -132,16 +70,8 @@
         width: 50vw;
     }
 
-    .mainCategoryContainer {
-        font-size: 32px;
-    }
-
     .navigationButton {
-        font-size: 32px;
-    }
-
-    .tutorialTitle {
-        font-size: 32px;
+        font-size: 20px;
     }
 }
 
@@ -150,16 +80,8 @@
         width: 30vw;
     }
 
-    .mainCategoryContainer {
-        font-size: 36px;
-    }
-
     .navigationButton {
-        font-size: 36px;
-    }
-
-    .tutorialTitle {
-        font-size: 36px;
+        font-size: 22px;
     }
 }
 
@@ -168,15 +90,7 @@
         width: 25vw;
     }
 
-    .mainCategoryContainer {
-        font-size: 42px;
-    }
-
     .navigationButton {
-        font-size: 42px;
-    }
-
-    .tutorialTitle {
-        font-size: 42px;
+        font-size: 24px;
     }
 }

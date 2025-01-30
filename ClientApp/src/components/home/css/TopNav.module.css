@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .title {
@@ -13,8 +15,6 @@
     padding: 1vh;
     margin-left: 2vw;
     margin-right: 2vw;
-    font-size: calc(0.25rem + 5vmin);
-    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     border: none;
     background-color: transparent;
@@ -35,10 +35,9 @@
     background-color: transparent;
     width: fit-content;
     height: fit-content;
+    margin-right: 1vw;
     border: none;
     padding: 1vh;
-    font-family: 'Roboto', sans-serif;
-    font-size: calc(0.15rem + 5vmin);
     font-weight: bold;
     color: #cfcfcf;
     float: right;
@@ -54,7 +53,6 @@
     height: fit-content;
     background-color: transparent;
     border: none;
-    font-size: calc(0.25rem + 5vmin);
     text-align: left;
     color: #cfcfcf;
     padding: 1vh;
@@ -69,30 +67,60 @@
     background-color: #cfcfcf19;
 }
 
-@media (hover: none) and (cursor: fine) {
-    .title{
+@media (hover: none) and (pointer: fine) {
+    .title:hover {
         background-color: transparent;
     }
 
-    .navButton {
+    .navButton:hover {
         background-color: transparent;
     }
 
-    .sidebarButton {
+    .sidebarButton:hover {
         background-color: transparent;
     }
 }
 
-@media (hover: none) and (cursor: coarse) {
-    .title {
+@media (hover: none) and (pointer: coarse) {
+    .title:hover {
         background-color: transparent;
     }
 
-    .navButton {
+    .navButton:hover {
         background-color: transparent;
     }
 
-    .sidebarButton {
+    .sidebarButton:hover {
         background-color: transparent;
+    }
+}
+
+@media (min-width: 576px) {
+   .main {
+       font-size: 28px;
+   }
+}
+
+@media (min-width: 768px) {
+    .main {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .main {
+        font-size: 36px;
     }
 }

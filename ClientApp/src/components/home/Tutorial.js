@@ -1,6 +1,8 @@
 ﻿import { React, forwardRef } from 'react';
 import { CodeBlock, vs2015 } from 'react-code-blocks';
 import styles from './css/Tutorial.module.css';
+import { TextParagraph } from '../tutorial/TextParagraph';
+import { CodeParagraph } from '../tutorial/CodeParagraph';
 
 export const Tutorial = forwardRef(({ currentTutorial }, ref) => {
     if (currentTutorial === null) {
@@ -9,38 +11,6 @@ export const Tutorial = forwardRef(({ currentTutorial }, ref) => {
         );
     }
 
-    const codeStyle = {
-        width: '80vw',
-        height: 'fit-content',
-        fontSize: '16px',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-
-        "@media (min-width: 576px)": {
-            fontSize: '16px'
-        },
-
-        "@media (min-width: 768px)": {
-            fontSize: '18px'
-        },
-
-        "@media (min-width: 992px)": {
-            fontSize: '20px'
-        },
-
-        "@media (min-width: 992px)": {
-            fontSize: '22px'
-        },
-
-        "@media (min-width: 1200px)": {
-            fontSize: '24px'
-        },
-
-        "@media (min-width: 1200px)": {
-            fontSize: '26px'
-        },
-    };
-
     return (
         <div className={styles.main} id="tutorial" ref={ref}>
             <p className={styles.header}>{currentTutorial.title}</p>
@@ -48,10 +18,10 @@ export const Tutorial = forwardRef(({ currentTutorial }, ref) => {
             {
                 currentTutorial.paragraphs.map(x => (
                     x.type === "Text" ? (
-                        <p key={x.paragraphId} className={styles.paragraph}>{x.content}</p>
+                        <TextParagraph key={x.paragraphId} editorMenu={false} paragraph={x} saveParagraph={() => { }} />
                     ) :
                     x.type === "Code" ? (
-                        <CodeBlock key={x.paragraphId} customStyle={codeStyle} text={x.content} language="csharp" theme={vs2015} showLineNumbers="true" />
+                        <CodeParagraph key={x.paragraphId} editorMenu={false} paragraph={x} saveParagraph={() => { }} />
                     ) : (
                         <img key={x.paragraphId} src={x.content} />
                     )
