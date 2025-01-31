@@ -2,35 +2,100 @@
     width: 100vw;
     height: fit-content;
     color: #cfcfcf;
-    font-size: 16px;
+    font-size: 14px;
     transition: width 0.55s ease-in-out, margin-left 0.55s ease-in-out;
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    margin-top: 1vh;
+    gap: 2vh;
 }
 
 .title {
     width: 80vw;
-    height: fit-content;
+    height: 6vh;
     margin-top: 1vh;
     margin-left: auto;
     margin-right: auto;
-    font-size: 24px;
+    font-size: 16px;
     background-color: transparent;
     color: inherit;
     resize: none;
 }
 
 .add {
-    width: 20vw;
+    width: fit-content;
     height: fit-content;
     padding: 3vh;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #565656;
     border: 0.1vh solid #cfcfcf;
+    font-size: inherit;
     color: inherit;
 }
 
 .add:hover {
+    background-color: #cfcfcf30;
+}
 
+@media (hover: none) and (pointer: fine) {
+    .ad:hover {
+        background-color: #565656;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .ad:hover {
+        background-color: #565656;
+    }
+}
+
+@media (min-width: 576px) {
+    .main {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main {
+        font-size: 22px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .main {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
 }

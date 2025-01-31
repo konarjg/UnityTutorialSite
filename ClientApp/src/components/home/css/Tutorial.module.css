@@ -1,7 +1,8 @@
 ﻿.main {
     width: 100vw;
+    height: fit-content;
     color: #cfcfcf;
-    font-size: 16px;
+    font-size: 14px;
     transition: width 0.55s ease-in-out, margin-left 0.55s ease-in-out;
     overflow-x: hidden;
     overflow-y: auto;
@@ -13,65 +14,56 @@
     width: 80vw;
     height: fit-content;
     color: #cfcfcf;
-    font-size: 32px;
+    font-size: 18px;
     font-weight: bolder;
 }
 
-.paragraph {
-    width: 80vw;
-    height: fit-content;
-    font-size: 32px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #cfcfcf;
-}
-
 @media(min-width: 576px) {
-    .paragraph {
-        font-size: 18px;
+    .main {
+        font-size: 16px;
     }
 
     .header {
-        font-size: 28px;
+        font-size: 18px;
     }
 }
 
 @media(min-width: 768px) {
-    .paragraph {
-        font-size: 20px;
+    .main {
+        font-size: 18px;
     }
 
     .header {
-        font-size: 32px;
+        font-size: 20px;
     }
 }
 
 @media(min-width: 992px) {
-    .paragraph {
-        font-size: 22px;
+    .main {
+        font-size: 20px;
     }
 
     .header {
-        font-size: 36px;
+        font-size: 22px;
     }
 }
 
 @media(min-width: 1200px) {
-    .paragraph {
-        font-size: 24px;
+    .main {
+        font-size: 22px;
     }
 
     .header {
-        font-size: 42px;
+        font-size: 24px;
     }
 }
 
 @media(min-width: 1400px) {
-    .paragraph {
-        font-size: 26px;
+    .main {
+        font-size: 24px;
     }
 
     .header {
-        font-size: 48px;
+        font-size: 28px;
     }
 }

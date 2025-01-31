@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 26px;
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -19,7 +19,6 @@
     border: none;
     background-color: transparent;
     color: #cfcfcf;
-    transition: background-color 0.4s ease-in-out;
 }
 
 .title:hover {
@@ -41,7 +40,6 @@
     font-weight: bold;
     color: #cfcfcf;
     float: right;
-    transition: background-color 0.4s ease-in-out;
 }
 
 .navButton:hover {
@@ -97,30 +95,30 @@
 
 @media (min-width: 576px) {
    .main {
-       font-size: 28px;
+       font-size: 18px;
    }
 }
 
 @media (min-width: 768px) {
     .main {
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
 @media (min-width: 992px) {
     .main {
-        font-size: 32px;
+        font-size: 22px;
     }
 }
 
 @media (min-width: 1200px) {
     .main {
-        font-size: 32px;
+        font-size: 24px;
     }
 }
 
 @media (min-width: 1400px) {
     .main {
-        font-size: 36px;
+        font-size: 28px;
     }
 }

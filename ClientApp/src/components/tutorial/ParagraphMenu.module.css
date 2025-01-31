@@ -1,7 +1,8 @@
 ﻿.dropdown {
     position: relative;
     top: 0;
-    left: 78vw;
+    left: 74vw;
+    right: 26vw;
     color: #cfcfcf;
     width: fit-content;
     height: fit-content;
@@ -28,11 +29,11 @@
 }
 
 .expand:hover {
-    color: #cfcfcfaa;
+    background-color: #cfcfcf20;
 }
 
 .content {
-    width: 10vw;
+    width: 30vw;
     height: 0vh;
     position: absolute;
     right: 0;
@@ -89,6 +90,10 @@
 }
 
 @media (min-width: 576px) {
+    .content {
+        width: 30vw;
+    }
+
     .dropdown {
         font-size: 16px;
     }
@@ -99,6 +104,10 @@
 }
 
 @media (min-width: 768px) {
+    .content {
+        width: 25vw;
+    }
+
     .dropdown {
         font-size: 18px;
     }
@@ -109,6 +118,10 @@
 }
 
 @media (min-width: 992px) {
+    .content {
+        width: 20vw;
+    }
+
     .dropdown {
         font-size: 20px;
     }
@@ -119,6 +132,10 @@
 }
 
 @media (min-width: 1200px) {
+    .content {
+        width: 15vw;
+    }
+
     .dropdown {
         font-size: 22px;
     }
@@ -129,6 +146,10 @@
 }
 
 @media (min-width: 1400px) {
+    .content {
+        width: 10vw;
+    }
+
     .dropdown {
         font-size: 24px;
     }

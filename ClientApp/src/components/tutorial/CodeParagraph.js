@@ -13,7 +13,7 @@ export const CodeParagraph = forwardRef(({ paragraph, editorMenu, saveParagraph,
 
     function renderParagraph() {
         return (
-            <CodeEditor language={"csharp"} readOnly={!edited} value={paragraph.content} />
+            <CodeEditor language={"csharp"} disabled={!edited} value={paragraph.content} />
         );
     }
 

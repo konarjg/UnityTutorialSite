@@ -30,7 +30,7 @@ export const TutorialEditor = forwardRef(({ editedTutorial, move, canMove, remov
             }
             </FlipMove>
 
-            <button className={styles.add}><i className="fa fa-fw fa-plus-square plus"/> Add paragraph</button>
+            <button className={styles.add}><i className="fa fa-fw fa-plus-square"/> Add paragraph</button>
         </div>
     );
 });
