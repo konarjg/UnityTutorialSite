@@ -2,6 +2,7 @@
 import FlipMove from 'react-flip-move';
 import { TextParagraph } from '../tutorial/TextParagraph';
 import { CodeParagraph } from '../tutorial/CodeParagraph';
+import { ImageParagraph } from '../tutorial/ImageParagraph';
 import styles from './TutorialEditor.module.css';
 
 export const TutorialEditor = forwardRef(({ editedTutorial, move, canMove, remove }, ref) => {
@@ -24,7 +25,7 @@ export const TutorialEditor = forwardRef(({ editedTutorial, move, canMove, remov
                     x.type === "Code" ? (
                         <CodeParagraph key={x.paragraphId} editorMenu={true} paragraph={x} saveParagraph={() => { }} moveParagraph={move} canMove={canMove} removeParagraph={remove} />
                     ) : (
-                        <img key={x.paragraphId} src={x.content} />
+                        <ImageParagraph key={x.paragraphId} editorMenu={true} paragraph={x} saveParagraph={() => { }} moveParagraph={move} canMove={canMove} removeParagraph={remove} />
                     )
                 ))
             }
