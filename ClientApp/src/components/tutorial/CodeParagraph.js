@@ -12,8 +12,34 @@ export const CodeParagraph = forwardRef(({ paragraph, editorMenu, saveParagraph,
     }
 
     function renderParagraph() {
+        const styleTest = {
+            width: "99%",
+            height: "fit-content",
+            margin: "auto",
+            marginBottom: "0.5vh",
+            whiteSpace: "break-spaces",
+            wordWrap: "break-word",
+            fontSize: "14px",
+            lineHeight: "1.6",
+            "@media (min-width: 576px)": {
+                fontSize: "16px"
+            },
+            "@media (min-width: 768px)": {
+                fontSize: "18px"
+            },
+            "@media (min-width: 992px)": {
+                fontSize: "20px"
+            },
+            "@media (min-width: 1200px)": {
+                fontSize: "22px"
+            },
+            "@media (min-width: 1400px)": {
+                fontSize: "24px"
+            },
+        }
+
         return (
-            <CodeEditor language={"csharp"} disabled={!edited} value={paragraph.content} />
+            <CodeEditor style={styleTest} language={"csharp"} readOnly={!edited} value={paragraph.content} />
         );
     }
 

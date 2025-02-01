@@ -1,5 +1,5 @@
 ﻿import { React, forwardRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { CategoryDropdown } from './CategoryDropdown';
 import styles from './css/Sidebar.module.css';
 
@@ -7,8 +7,6 @@ export const Sidebar = forwardRef(({ categories, canEdit, displayTutorial }, ref
     const navigate = useNavigate();
 
     function handleChangeRoute(route) {
-        sessionStorage.removeItem('categories');
-        sessionStorage.removeItem('currentTutorial');
         navigate(route);
         window.location.reload();
     }

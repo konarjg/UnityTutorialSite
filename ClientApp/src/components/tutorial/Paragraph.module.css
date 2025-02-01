@@ -21,6 +21,27 @@
     margin-bottom: 0.5vh;
     white-space: break-spaces;
     word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.imagePicker {
+    font-size: 14px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.imagePicker::file-selector-button {
+    font-size: inherit;
+    margin-left: 1vw;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .editable {
@@ -31,10 +52,26 @@
     .main {
         font-size: 16px;
     }
+
+    .content {
+        font-size: 16px;
+    }
+
+    .imagePicker {
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 768px) {
     .main {
+        font-size: 18px;
+    }
+
+    .content {
+        font-size: 18px;
+    }
+
+    .imagePicker {
         font-size: 18px;
     }
 }
@@ -43,16 +80,40 @@
     .main {
         font-size: 20px;
     }
+
+    .content {
+        font-size: 20px;
+    }
+
+    .imagePicker {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
     .main {
         font-size: 22px;
     }
+
+    .content {
+        font-size: 22px;
+    }
+
+    .imagePicker {
+        font-size: 22px;
+    }
 }
 
 @media (min-width: 1400px) {
     .main {
+        font-size: 24px;
+    }
+
+    .content {
+        font-size: 24px;
+    }
+
+    .imagePicker {
         font-size: 24px;
     }
 }

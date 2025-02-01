@@ -2,12 +2,14 @@
 
 export function useSidebar(categories, currentTutorial, topNavRef, sidebarRef, tutorialRef) {
     useEffect(() => {
+        window.addEventListener('load', updateSidebar);
         window.addEventListener('resize', updateSidebar);
         sessionStorage.setItem('categories', JSON.stringify(categories));
         sessionStorage.setItem('currentTutorial', JSON.stringify(currentTutorial));
 
         return () => {
             window.removeEventListener('resize', updateSidebar);
+            window.removeEventListener('load', updateSidebar);
         };
     }, [categories, currentTutorial]);
 
@@ -16,8 +18,10 @@ export function useSidebar(categories, currentTutorial, topNavRef, sidebarRef, t
         var sidebar = sidebarRef.current;
         var tutorial = tutorialRef.current;
 
+        sidebar.style.top = topnav.scrollHeight + "px";
         sidebar.style.height = (window.innerHeight - topnav.offsetHeight) + "px";
-        tutorial.style.height = (window.innerHeight - topnav.offsetHeight) + "px";
+        tutorial.style.top = topnav.scrollHeight + "px";
+        tutorial.style.height = (window.innerHeight - topnav.offsetHeight - 0.02 * window.innerHeight) + "px";
     }
 
     function toggleSidebar() {

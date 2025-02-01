@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: auto;
     left: -100vw;
     background: #565656;
     overflow-y: scroll;

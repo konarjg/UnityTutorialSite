@@ -26,14 +26,14 @@ export const ImageParagraph = forwardRef(({ paragraph, editorMenu, saveParagraph
         if (edited) {
             return (
                 <div className={`${styles.content} ${edited ? styles.editable : ""}`}>
-                    <input type="file" accept="image/*" onChange={handleImageChange} />
-                    <img className={`${styles.content} ${edited ? styles.editable : ""}`} src={image} alt="test" />
+                    <input className={styles.imagePicker} type="file" accept="image/*" onChange={handleImageChange} />
+                    <img className={styles.image} src={image} alt="paragraph" />
                 </div>
             );
         }
 
         return (
-            <img className={`${styles.content} ${edited ? styles.editable : ""}`} src={image} alt="test" />
+            <img className={image} src={image} alt="paragraph" />
         );
     }
 

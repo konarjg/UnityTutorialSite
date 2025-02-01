@@ -12,7 +12,7 @@ export const TextParagraph = forwardRef(({ paragraph, editorMenu, saveParagraph,
 
     function renderParagraph() {
         return (
-            <div className={`${styles.content} ${edited ? styles.editable : ""}`} contentEditable={edited}>{paragraph.content}</div>
+            <p className={`${styles.content} ${edited ? styles.editable : ""}`} contentEditable={edited}>{paragraph.content}</p>
         );
     }
 

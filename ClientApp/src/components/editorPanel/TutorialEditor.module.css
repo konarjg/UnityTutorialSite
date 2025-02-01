@@ -1,4 +1,7 @@
 ﻿.main {
+    position: absolute;
+    top: 6vh;
+    left: 0;
     width: 100vw;
     height: fit-content;
     color: #cfcfcf;
@@ -6,13 +9,33 @@
     transition: width 0.55s ease-in-out, margin-left 0.55s ease-in-out;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1vh;
     margin-top: 1vh;
     gap: 2vh;
 }
 
+.paragraph {
+    width: 80vw;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: inherit;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.image {
+    width: 80vw;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .title {
     width: 80vw;
-    height: 6vh;
+    min-height: fit-content;
+    height: fit-content;
     margin-top: 1vh;
     margin-left: auto;
     margin-right: auto;
