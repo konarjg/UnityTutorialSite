@@ -10,19 +10,19 @@ export const Tutorial = forwardRef(({ currentTutorial }, ref) => {
             <div className={styles.main} ref={ref}>
                 <h1 className={styles.header}>Welcome to Unity Tutorials!</h1>
                 <p className={styles.paragraph}>
-                    If <i>You</i> wish to learn game development using <b>Unity Engine</b> in a simple and effective way, this site is exactly for <i>You</i>!
+                    If you wish to learn game development using <b>Unity Engine</b> in a simple and effective way, this site is exactly for you!
                     <br />
                     Select from multiple categories from general programming in <b>C#</b> to complex <b>Unity</b> concepts.
                     <br />
-                    Learn as <i>You</i> go, tracking progress is available for users who created an account making the learning flawless.
+                    Learn as you go, tracking progress is available for users who created an account making the learning flawless.
                     <br />
-                    Learn at personal pace and only the topics desired to learn. Whether a beginner, middle skilled or an expert <i>You</i> will definitely find something new to learn on this site.
+                    Learn at personal pace and only the topics desired to learn. Whether a beginner, middle skilled or an expert you will definitely find something new to learn on this site.
                     <br />
                     Subscribe to our newsletter in the account panel to receive updates on new content!
                     <br />
-                    Click the <b>Login button</b> in the <b>top right corner</b> of the site to create <i>Your</i> account and start learning today!
+                    Click the <b>Login button</b> in the <b>top right corner</b> of the site to create your account and start learning today!
                     <br />
-                    We wish <i>You</i> a great journey with game development and programming.   
+                    We wish you a great journey with game development and programming.   
                     <br />
                     <b>Happy coding!</b>
                 </p>

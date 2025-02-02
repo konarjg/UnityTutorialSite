@@ -1,15 +1,14 @@
 ﻿import { React, useState, useEffect } from 'react';
 import { TopNav } from '../home/TopNav';
 import { Sidebar } from '../home/Sidebar';
-import { LoginForm } from './LoginForm';
-import { RegisterForm } from './RegisterForm';
+import { ForgotPasswordForm } from './ForgotPasswordForm';
 import { useRef } from 'react';
 import { useSidebar } from '../hooks/useSidebar';
 import { useDatabase } from '../DatabaseProvider';
 
 import styles from './Login.module.css';
 
-export function Login() {
+export function ForgotPassword() {
     const topnavRef = useRef(null);
     const sidebarRef = useRef(null);
     const formRef = useRef(null);
@@ -24,9 +23,7 @@ export function Login() {
             <div className={styles.content}>
                 <Sidebar categories={categories} canEdit={user.editor} displayTutorial={(tutorial) => setCurrentTutorial(tutorial)} ref={sidebarRef} />
                 <div className={styles.forms} ref={formRef}>
-                    <LoginForm />
-                    <RegisterForm />
-                    
+                    <ForgotPasswordForm />
                 </div>
             </div>
         </div>

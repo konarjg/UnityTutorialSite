@@ -4,9 +4,10 @@ import { Sidebar } from './Sidebar';
 import { Tutorial } from './Tutorial'
 import { useRef } from 'react';
 import { useSidebar } from '../hooks/useSidebar';
-import styles from './css/Home.module.css';
 import { useDatabase } from '../DatabaseProvider';
 import { useLocation } from 'react-router-dom';
+
+import styles from './css/Home.module.css';
 
 export function Home() {
     const location = useLocation();

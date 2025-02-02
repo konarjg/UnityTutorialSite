@@ -1,16 +1,19 @@
 ﻿.sidebar {
     width: 80vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     position: fixed;
     left: -100vw;
+    -webkit-backface-visibility: hidden;
     background: #565656;
     overflow-y: scroll;
     overflow-x: hidden;
     gap: 0.5vh;
     color: #cfcfcf;
     scrollbar-color: #777777 #565656;
-    transition: left 0.5s ease-in-out;
+    transition: left 0.75s ease-in-out;
+    z-index: 9999;
 }
 
 .navigation {

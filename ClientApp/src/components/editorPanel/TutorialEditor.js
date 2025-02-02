@@ -11,11 +11,11 @@ export const TutorialEditor = forwardRef(({ editedTutorial, move, canMove, remov
             <div className={styles.main} ref={ref}>
                 <h1 className={styles.title}>Welcome to <b>Editor panel</b>,</h1>
                 <p className={styles.paragraph}>
-                    Here <i>You can</i> create the tutorials for the users of this site,
+                    Here you can create the tutorials for the users of this site,
                     <br/>
-                    Remember to save <i>Your</i> work and keep the content clean and organized in small paragraphs.
+                    Remember to save your work and keep the content clean and organized in small paragraphs.
                     <br />
-                    We wish <i>You</i> happy editing!
+                    We wish you happy editing!
                 </p>
 
                 <img className={styles.image} src="editor.png" />

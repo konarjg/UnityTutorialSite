@@ -1,0 +1,225 @@
+﻿.main {
+    width: 80%;
+    height: fit-content;
+    color: #cfcfcf;
+    font-size: 14px;
+    border: 0.5vh solid white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    text-align: center;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    font-size: inherit;
+    font-weight: bolder;
+}
+
+.form {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.label {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: inherit;
+}
+
+.inputContainer {
+    width: 60%;
+    position: relative;
+    margin-left: 0.5vw;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inputValidation {
+    width: 2%;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.inputTooltip {
+    color: #cf0000;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+.passwordTooltip {
+    color: inherit;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input {
+    width: 99%;
+    background: none;
+    border: 0.5vh solid #cfcfcf;
+    font-size: inherit;
+    color: #cfcfcf;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input:user-invalid {
+    border: 0.5vh solid #cf0000;
+}
+
+.input:valid {
+    border: 0.5vh solid #00cf00;
+}
+
+.input:valid + .inputValidation::before {
+    content: "\f058";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #00cf00;
+}
+
+.input:user-invalid + .inputValidation::before {
+    content: "\f057";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #cf0000;
+}
+
+.form:invalid .submit {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.forgotLink {
+    width: 60%;
+    font-size: inherit;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forgotLink:visited {
+    color: white;
+}
+
+.forgotLink:hover {
+    color: #ffffffdd;
+}
+
+.submit {
+    width: 99%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    font-size: inherit;
+    background-color: #777777;
+    border: none;
+    color: white;
+}
+
+.submit:hover {
+    background-color: #888888;
+}
+
+.image {
+    width: 80%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+
+@media (hover: none) and (pointer: fine) {
+    .submit:hover {
+        background-color: #777777;
+    }
+
+    .forgotLink:hover {
+        color: white;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .submit:hover {
+        background-color: #777777;
+    }
+
+    .forgotLink:hover {
+        color: white;
+    }
+}
+
+
+@media(min-width: 576px) {
+    .main {
+        font-size: 16px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+}
+
+@media(min-width: 768px) {
+    .main {
+        font-size: 18px;
+    }
+
+    .header {
+        font-size: 22px;
+    }
+}
+
+@media(min-width: 992px) {
+    .main {
+        font-size: 20px;
+    }
+
+    .header {
+        font-size: 24px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .main {
+        font-size: 22px;
+    }
+
+    .header {
+        font-size: 28px;
+    }
+}
+
+@media(min-width: 1400px) {
+    .main {
+        font-size: 24px;
+    }
+
+    .header {
+        font-size: 32px;
+    }
+}
