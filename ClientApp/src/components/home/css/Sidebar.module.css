@@ -1,6 +1,6 @@
 ﻿.sidebar {
     width: 80vw;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -9,7 +9,7 @@
     background: #565656;
     overflow-y: scroll;
     overflow-x: hidden;
-    gap: 0.5vh;
+    gap: 0.6vh;
     color: #cfcfcf;
     scrollbar-color: #777777 #565656;
     transition: left 0.75s ease-in-out;
@@ -33,6 +33,11 @@
 
 .navigationButton:hover {
     background-color: #cfcfcf19;
+}
+
+.add {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
 }
 
 @media (hover: none) and (pointer: fine) {

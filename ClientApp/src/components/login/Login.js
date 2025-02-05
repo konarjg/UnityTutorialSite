@@ -22,7 +22,7 @@ export function Login() {
             <TopNav onClick={toggleSidebar} ref={topnavRef} />
 
             <div className={styles.content}>
-                <Sidebar categories={categories} canEdit={user.editor} displayTutorial={(tutorial) => setCurrentTutorial(tutorial)} ref={sidebarRef} />
+                <Sidebar user={user} categories={categories} canEdit={user.editor} displayTutorial={(tutorial) => setCurrentTutorial(tutorial)} ref={sidebarRef} />
                 <div className={styles.forms} ref={formRef}>
                     <LoginForm />
                     <RegisterForm />

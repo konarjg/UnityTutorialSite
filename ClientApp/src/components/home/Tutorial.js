@@ -4,7 +4,7 @@ import styles from './css/Tutorial.module.css';
 import { TextParagraph } from '../tutorial/TextParagraph';
 import { CodeParagraph } from '../tutorial/CodeParagraph';
 
-export const Tutorial = forwardRef(({ currentTutorial }, ref) => {
+export const Tutorial = forwardRef(({ user, currentTutorial, handleMarkCompletion }, ref) => {
     if (currentTutorial === null) {
         return (
             <div className={styles.main} ref={ref}>
@@ -46,6 +46,20 @@ export const Tutorial = forwardRef(({ currentTutorial }, ref) => {
                     ) : (
                         <img key={x.paragraphId} src={x.content} />
                     )
+                ))
+            }
+
+            {
+                (!user.editor &&
+                user.completeTutorials.find(x => x.tutorialId === currentTutorial.tutorialId) === undefined ? 
+                (
+                    <div className={styles.bottomNav}>
+                        <button className={styles.mark} onClick={() => handleMarkCompletion(currentTutorial, true)}>Mark as completed</button>
+                    </div> 
+                ) : (
+                    <div className={styles.bottomNav}>
+                        <button className={styles.unmark} onClick={() => handleMarkCompletion(currentTutorial, false)}>Mark as uncompleted</button>
+                    </div> 
                 ))
             }
         </div>

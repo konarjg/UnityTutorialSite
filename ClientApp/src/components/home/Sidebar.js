@@ -1,10 +1,11 @@
-﻿import { React, forwardRef } from 'react';
+﻿import { React, forwardRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { CategoryDropdown } from './CategoryDropdown';
 import styles from './css/Sidebar.module.css';
 
-export const Sidebar = forwardRef(({ categories, canEdit, displayTutorial }, ref) => {
+export const Sidebar = forwardRef(({ user, categories, canEdit, handleRemoveTutorial, handleAddTutorial, handleAddCategory, handleRemoveCategory, displayTutorial }, ref) => {
     const navigate = useNavigate();
+    const location = useLocation();
 
     function handleChangeRoute(route) {
         navigate(route);
@@ -12,7 +13,7 @@ export const Sidebar = forwardRef(({ categories, canEdit, displayTutorial }, ref
     }
 
     return (
-        <div className={styles.sidebar} id='sidebar' ref={ref}>
+        <div className={styles.sidebar} ref={ref}>
             <div className={styles.navigation} >
                 <div className={styles.navigationButton} onClick={() => handleChangeRoute('/')}>Home</div>
                 <div className={styles.navigationButton} onClick={() => handleChangeRoute('/About')}>About me</div>
@@ -21,8 +22,12 @@ export const Sidebar = forwardRef(({ categories, canEdit, displayTutorial }, ref
 
             {
                 categories.map(category =>
-                    <CategoryDropdown key={category.categoryId} category={category} displayTutorial={displayTutorial} />
+                    <CategoryDropdown user={user} canEdit={canEdit} handleRemoveTutorial={handleRemoveTutorial} handleAddTutorial={handleAddTutorial} handleRemoveCategory={handleRemoveCategory} trackProgress={!canEdit} key={category.categoryId} category={category} displayTutorial={displayTutorial} />
                 )
+            }
+
+            {
+                location.pathname === "/EditorPanel" && <div className={`${styles.navigationButton} ${styles.add}`} onClick={handleAddCategory}><i className="fa fa-fw fa-plus" /> Add Category</div>
             }
            
         </div>

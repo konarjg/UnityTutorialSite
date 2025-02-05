@@ -1,4 +1,5 @@
 ﻿.title {
+    width: 70%;
     color: #cfcfcf;
     font-size: 14px;
     border: 0.25vh dotted transparent;
@@ -15,15 +16,41 @@
     border: 0.25vh dotted #cfcfcf;
 }
 
+.completed {
+    margin-top: 0.5vh;
+    color: #00cf00;
+    vertical-align: middle;
+    float: right;
+}
+
+.delete {
+    z-index: 10000;
+    margin-top: 0.5vh;
+    color: #cf0000;
+    float: right;
+}
+
+.delete:hover {
+    color: #cf000080;
+}
+
 @media (hover: none) and (pointer: fine) {
     .title:hover {
         background-color: transparent;
+    }
+
+    .delete:hover {
+        color: #cf0000;
     }
 }
 
 @media (hover: none) and (pointer: coarse) {
     .title:hover {
         background-color: transparent;
+    }
+
+    .delete:hover {
+        color: #cf0000;
     }
 }
 

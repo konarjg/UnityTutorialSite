@@ -7,6 +7,10 @@ export function useMovableParagraphs(tutorial, setTutorial, categories, setCateg
         var tutorials = [...category.tutorials];
         var state = tutorials.find(x => x.tutorialId === tutorial.tutorialId);
 
+        if (state === undefined) {
+            return false;
+        }
+
         var list = [...state.paragraphs];
 
         var index = list.findIndex(item => item.paragraphId === paragraph.paragraphId);

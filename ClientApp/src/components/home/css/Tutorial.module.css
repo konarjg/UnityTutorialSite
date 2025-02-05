@@ -42,6 +42,68 @@
     display: block;
 }
 
+.bottomNav {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mark {
+    width: fit-content;
+    height: fit-content;
+    padding: 3vh;
+    border: 0.5vh solid white;
+    background-color: #565656;
+    color: white;
+    font-size: inherit;
+}
+
+.mark:hover {
+    background-color: #666666;
+}
+
+.unmark {
+    width: fit-content;
+    height: fit-content;
+    padding: 3vh;
+    border: 0.5vh solid #ffffff80;
+    background-color: #56565680;
+    color: #ffffff80;
+    font-size: inherit;
+}
+
+.unmark:hover {
+    border: 0.5vh solid #ffffffaa;
+    background-color: #565656aa;
+    color: #ffffffaa;
+}
+
+@media (hover: none) and (pointer: fine) {
+    .mark:hover {
+        background-color: #565656;
+    }
+
+    .unmark:hover {
+        border: 0.5vh solid #ffffff80;
+        background-color: #56565680;
+        color: #ffffff80;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .mark:hover {
+        background-color: #565656;
+    }
+
+    .unmark:hover {
+        border: 0.5vh solid #ffffff80;
+        background-color: #56565680;
+        color: #ffffff80;
+    }
+}
+
 @media(min-width: 576px) {
     .main {
         font-size: 16px;

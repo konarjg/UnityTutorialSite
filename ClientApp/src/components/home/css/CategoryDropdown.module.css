@@ -8,10 +8,17 @@
 }
 
 .title {
+    width: 80%;
     height: fit-content;
     display: inline-flex;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     flex-direction: row;
     font-size: inherit;
+    z-index: 10000;
+    justify-content: flex-start;
 }
 
 .panel:hover {
@@ -33,6 +40,8 @@
     height: fit-content;
     padding: 0.5vh;
     font-weight: bold;
+    font-size: inherit;
+    float: right;
 }
 
 .expand:hover {
@@ -51,12 +60,49 @@
     gap: 0.5vh;
 }
 
+.completion {
+    width: fit-content;
+    height: fit-content;
+    float: right;
+}
+
+.add {
+    width: 99%;
+    height: fit-content;
+    color: #cfcfcf;
+    font-size: inherit;
+    border: 0.25vh dotted transparent;
+    margin-left: 0.5vw;
+}
+
+.add:hover {
+    background-color: #cfcfcf19;
+}
+
+.delete {
+    color: #cf0000;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5vh;
+    font-size: inherit;
+    font-weight: bold;
+    float: right;
+}
+
+.delete:hover {
+    color: #cf000080;
+}
+
 @media (hover: none) and (pointer: fine) {
     .panel:hover {
         background-color: transparent;
     }
 
     .expand:hover {
+        background-color: transparent;
+    }
+
+    .add:hover {
         background-color: transparent;
     }
 }
@@ -68,6 +114,10 @@
     }
 
     .expand:hover {
+        background-color: transparent;
+    }
+
+    .add:hover {
         background-color: transparent;
     }
 }

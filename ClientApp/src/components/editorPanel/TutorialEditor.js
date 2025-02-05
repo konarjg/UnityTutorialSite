@@ -6,7 +6,7 @@ import { ImageParagraph } from '../tutorial/ImageParagraph';
 import styles from './TutorialEditor.module.css';
 
 export const TutorialEditor = forwardRef(({ editedTutorial, move, canMove, remove }, ref) => {
-    if (editedTutorial === null) {
+    if (editedTutorial === null || editedTutorial === undefined) {
         return (
             <div className={styles.main} ref={ref}>
                 <h1 className={styles.title}>Welcome to <b>Editor panel</b>,</h1>

@@ -29,13 +29,29 @@ export function Home() {
 
     }, [location, categories, setCurrentTutorial]);
 
+    function handleMarkCompletion(tutorial, complete) {
+        const state = { ...user };
+        const completeTutorials = [...user.completeTutorials];
+
+        if (complete) {
+            completeTutorials.push({ ...tutorial });
+        }
+        else {
+            const index = completeTutorials.findIndex(x => x.tutorialId === tutorial.tutorialId);
+            completeTutorials.splice(index, 1);
+        }
+        
+        state.completeTutorials = completeTutorials;
+        setUser(state);
+    }
+
     return(
         <div className={styles.main}>
             <TopNav onClick={toggleSidebar} ref={topnavRef} />
 
             <div className={styles.content}>
-                <Sidebar categories={categories} canEdit={user.editor} displayTutorial={(tutorial) => setCurrentTutorial(tutorial)} ref={sidebarRef} />
-                <Tutorial currentTutorial={currentTutorial} ref={tutorialRef}/>
+                <Sidebar user={user} categories={categories} canEdit={user.editor} displayTutorial={(tutorial) => setCurrentTutorial(tutorial)} ref={sidebarRef} />
+                <Tutorial user={user} handleMarkCompletion={handleMarkCompletion} currentTutorial={currentTutorial} ref={tutorialRef} />
             </div>
         </div>
     );
